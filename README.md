@@ -15,6 +15,7 @@ A minimal, production-ready RAG (Retrieval Augmented Generation) application wit
 
 - Python 3.10+
 - Ollama installed with models: `nomic-embed-text` and `qwen3:1.7b`
+- These models are one i used you can can use any model you like but you will need 1 model for embedding and 1 for other tasks. 
 - Docker & Docker Compose (for Qdrant)
 - 4GB+ RAM, 2GB+ disk space
 
