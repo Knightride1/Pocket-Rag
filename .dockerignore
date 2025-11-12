@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Project
+.git
+.gitignore
+README.md
+notes.txt
+.env
+.env.local
+
+# Data (optional - comment out if you want to preserve on build)
+# backend/chat_history.db
+# backend/uploaded_pdfs/*
+
+# Docker
+docker-compose.*.yml
+Dockerfile.dev

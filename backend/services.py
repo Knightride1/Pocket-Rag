@@ -5,9 +5,13 @@ from langchain_community.embeddings import OllamaEmbeddings
 from langchain_qdrant import QdrantVectorStore
 from qdrant_client import QdrantClient
 from qdrant_client.http.exceptions import ResponseHandlingException
+import os
 
-QDRANT_URL = "http://localhost:6333"
-OLLAMA_BASE_URL = "http://localhost:11434"
+# Use environment variables for URLs (Docker-compatible)
+# Docker network: qdrant -> http://qdrant:6333
+# Host Ollama: http://host.docker.internal:11434 (Docker Desktop) or http://localhost:11434 (native)
+QDRANT_URL = os.getenv("QDRANT_URL", "http://qdrant:6333")
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://host.docker.internal:11434")
 
 def load_and_chunk_pdf(file_path):
     """Load PDF and split into chunks"""
